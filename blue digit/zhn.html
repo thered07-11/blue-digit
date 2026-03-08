@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Blue Digit Solutions</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    color:#FFFFFF;
+    font-family:'Poppins',sans-serif;
+    line-height:1.6;
+    position:relative;
+    z-index:1;
+}
+
+/* BACKGROUND PRINCIPAL = f1 */
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background:url("f1.jpeg") center/cover no-repeat;
+    filter:blur(1px);
+    transform:scale(1.1);
+
+    z-index:-2;
+}
+
+/* COUCHE SOMBRE */
+body::after{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(13,27,42,0.85);
+    z-index:-1;
+}
+
+h1,h2{
+    font-family:'Bangers',cursive;
+    letter-spacing:2px;
+}
+
+a{text-decoration:none;color:inherit;}
+
+/* HERO AVEC IMAGE STARTUP f3 */
+header{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+    padding:20px;
+    overflow:hidden;
+}
+
+/* IMAGE STARTUP DERRIÈRE TEXTE */
+header::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:url("f3.jpeg") center/cover no-repeat;
+    opacity:10;
+    filter:blur(2px);
+    z-index:-1;
+}
+
+header h1{
+    font-size:3.5rem;
+    color:#00BFFF;
+    margin-bottom:20px;
+}
+
+header p{
+    font-size:1.3rem;
+    color:#FFA500;
+    margin-bottom:30px;
+}
+
+.btn{
+    padding:15px 30px;
+    border:none;
+    border-radius:8px;
+    background:#FFA500;
+    color:#0D1B2A;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#FF8C00;
+    transform:scale(1.05);
+}
+
+/* SECTIONS */
+section{
+    padding:80px 20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+section h2{
+    font-size:2.5rem;
+    color:#00BFFF;
+    text-align:center;
+    margin-bottom:30px;
+}
+
+/* SERVICES */
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.service-card{
+    background:#1B263B;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(0,191,255,0.2);
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px rgba(0,191,255,0.5);
+}
+
+.service-card h3{
+    color:#FFA500;
+    margin-bottom:10px;
+}
+
+/* PORTFOLIO */
+.portfolio{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.project{
+    width:300px;
+    background:#1B263B;
+    border-radius:12px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.project:hover{transform:scale(1.05);}
+
+.project img{width:100%;}
+
+.project a{
+    display:block;
+    padding:15px;
+    text-align:center;
+    background:#0D1B2A;
+    color:#FFA500;
+    font-weight:bold;
+}
+
+/* PRICING */
+.pricing{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.price-card{
+    background:#1B263B;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    transition:.3s;
+}
+
+.price-card:hover{transform:translateY(-10px);}
+
+/* CONTACT */
+.contact{text-align:center;}
+
+.whatsapp-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:15px 25px;
+    background:#25D366;
+    color:white;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.whatsapp-btn:hover{
+    background:#1ebe5d;
+    transform:scale(1.05);
+}
+
+/* FOOTER */
+footer{
+    background:#1B263B;
+    padding:20px;
+    text-align:center;
+    color:#AAAAAA;
+}
+
+@media(max-width:768px){
+    header h1{font-size:2.5rem;}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<header>
+    <h1>BLUE DIGIT SOLUTIONS</h1>
+    <p>Création de sites web & stratégies digitales pour entreprises ambitieuses</p>
+
+    <button class="btn"
+        onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        Demander un devis
+    </button>
+</header>
+
+<!-- SERVICES -->
+<section id="services">
+<h2>Nos Services</h2>
+
+<div class="services">
+<div class="service-card">
+<h3>Création de sites web</h3>
+<p>De 20 000 à 75 000 FCFA<br>selon les options</p>
+</div>
+
+<div class="service-card">
+<h3>Conception de Logos</h3>
+<p>PDF : 6 000 FCFA<br>JPEG : 4 500 FCFA<br>PNG : 7 500 FCFA</p>
+</div>
+
+<div class="service-card">
+<h3>Hébergement & Maintenance</h3>
+<p>Support et sécurité 24/7</p>
+</div>
+
+<div class="service-card">
+<h3>Optimisation SEO</h3>
+<p>Augmentez votre visibilité en ligne</p>
+</div>
+</div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+<h2>Projets Réalisés</h2>
+
+<div class="portfolio">
+<div class="project">
+<img src="f2.jpg" alt="Projet Blue Digit">
+<a href="https://kamba-corp.netlify.app" target="_blank">Voir le projet</a>
+</div>
+</div>
+</section>
+
+<!-- TARIFS -->
+<section id="pricing">
+<h2>Tarifs</h2>
+
+<div class="pricing">
+<div class="price-card">
+<h3>Sites Web</h3>
+<p>20 000f à 75 000f<br>le prix selon les options</p>
+</div>
+
+<div class="price-card">
+<h3>Logos</h3>
+<p>PDF : 6 000 FCFA<br>JPEG : 4 500 FCFA<br>PNG : 7 500 FCFA</p>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+<h2>Contactez-nous</h2>
+
+<p>Email :
+<a href="mailto:Zhnbuisness@gmail.com">Zhnbuisness@gmail.com</a><br>
+Ouagadougou
+</p>
+
+<a class="whatsapp-btn"
+href="https://wa.me/22644245994?text=Bonjour%20je%20veux%20un%20devis%20pour%20un%20site%20web"
+target="_blank">
+💬 Écrire sur WhatsApp
+</a>
+
+</section>
+
+<footer>
+© 2024 Blue Digit Solutions | initiée par zhn corp
+</footer>
+
+</body>
+</html>
